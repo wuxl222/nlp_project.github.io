@@ -69,215 +69,62 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-project" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Sharing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/12/26/project/" class="article-date">
-  <time class="dt-published" datetime="2023-12-26T02:01:21.000Z" itemprop="datePublished">2023-12-26</time>
+    <a href="/2023/12/26/Sharing/" class="article-date">
+  <time class="dt-published" datetime="2023-12-26T02:08:26.155Z" itemprop="datePublished">2023-12-26</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/26/project/">project</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 align='center'>Project 2</h3>
+        <h3 align='center'> How to apply LLMs in specific domains</h3>
 
-<h5 align='right'>吴晓玲 12332886</h5>
+<h5 align='right'>吴晓玲</h5>
 
-<h4 id="Q1"><a href="#Q1" class="headerlink" title="Q1:"></a>Q1:</h4><h4 id="DEBERTA-DECODING-ENHANCED-BERT-WITH-DIS-ENTANGLED-ATTENTION"><a href="#DEBERTA-DECODING-ENHANCED-BERT-WITH-DIS-ENTANGLED-ATTENTION" class="headerlink" title="DEBERTA: DECODING-ENHANCED BERT WITH DIS-ENTANGLED ATTENTION"></a>DEBERTA: DECODING-ENHANCED BERT WITH DIS-ENTANGLED ATTENTION</h4><p>1.这篇文章究竟讲了什么问题？它的 input 和 output 是什么？</p>
-<blockquote>
-<p> <font color='black'>In this paper, a new model architecture <strong>DeBERTa</strong> (Decoding-enhanced BERT with disentangled attention) is proposed that <strong>improves the BERT and RoBERTa models</strong> using two novel techniques.</font></p>
-<p> <font color='black'>The first is the <strong>disentangled attention mechanism</strong>, where each word is represented using two vectors that encode its content and position, respectively, and the attention weights among words are computed using disentangled matrices on their contents and relative positions, respectively. </font></p>
-<p> <font color='black'>Second, <strong>an enhanced mask decoder</strong> is used to incorporate absolute positions in the decoding layer to predict the masked tokens in model pre-training. In addition, <strong>a new virtual adversarial training method</strong> is used for fine-tuning to improve models’ generalization.</font></p>
-<p> <font color='black'>The <strong>input</strong> of DeBERTa is a sequence of tokens, and the <strong>output</strong> is a  sequence of hidden states that capture the contextual information of  each token. These hidden states can be used as features for downstream  natural language processing tasks, such as text classification, question answering, and natural language inference.</font></p>
-</blockquote>
-<p>2.这是一个新的问题吗？如果是一个新问题，它的重要性何在？如果不完全是一个新问题，那为什么它“仍然重要”？</p>
-<blockquote>
-<p><font color='black'>The problem addressed by the DeBERTa model <strong>is not entirely new</strong>, as it  builds upon existing natural language processing models such as BERT and RoBERTa. However, DeBERTa introduces significant improvements by  incorporating the disentangled attention mechanism and an enhanced mask  decoder, making it more efficient and accurate in handling natural  language tasks.</font></p>
-<p><font color='black'>The disentangled attention mechanism allows the model to better  understand the relationships between words, particularly their  positional relationships. The enhanced mask decoder improves the model’s ability to predict masked vocabulary during pre-training.</font></p>
-<p><font color='black'>While these problems are not entirely new, the introduction and  application of the DeBERTa model are significant for advancing natural  language processing technology. DeBERTa has demonstrated remarkable  performance across multiple NLP benchmark tests, even surpassing human  performance on certain tasks. Additionally, DeBERTa opens up new  research directions for future large-scale model studies.</font></p>
-</blockquote>
-<p>3.这篇文章致力于证明什么假设？</p>
-<blockquote>
-<p><font color='black'>The key hypothesis being addressed is that <strong>by incorporating the  disentangled attention mechanism and an enhanced mask decoder</strong>, DeBERTa  can significantly improve upon existing models such as BERT and RoBERTa  in terms of efficiency and accuracy in natural language understanding  tasks. The paper seeks to validate the hypothesis that these novel  techniques can lead to substantial performance gains, as evidenced by  the model’s superior results on various NLP benchmark datasets.</font></p>
-</blockquote>
-<p>4.有哪些与这篇文章相关的研究？这一领域有哪些关键人物？</p>
-<blockquote>
-<p><font color='black'>与DeBERTa相关的研究包括: </font></p>
+<p>Large Language Models (LLMs) have revolutionized the field of Natural  Language Processing (NLP) with their ability to understand and generate  human-like text. They can be fine-tuned and applied in various domains  to perform specific tasks. Here’s a detailed guide on how to apply LLMs  in specific domains, focusing on fine-tuning, training, and inference.</p>
+<p><strong>Fine-Tuning LLMs</strong></p>
 <ul>
-<li><font color='black'>BERT: Jacob Devlin et al. (2018) - Pre-training of Deep Bidirectional Transformers for Language Understanding </font></li>
-<li><font color='black'>RoBERTa: Yinhan Liu et al. (2019) - A Robustly Optimized BERT Pretraining Approach</font></li>
-<li><font color='black'>XLNet: Zhilin Yang et al. (2019) - Generalized Autoregressive Pretraining for Language Understanding  </font></li>
-<li><font color='black'>T5: Colin Raffel et al. (2019) - Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer </font></li>
-<li><font color='black'>ELECTRA: Kevin Clark et al. (2020) - Pre-training Text Encoders as Discriminators Rather Than Generators </font></li>
+<li>Fine-tuning is a process where a pre-trained model, which has already learned patterns and features on a large dataset, is further trained on a smaller, domain-specific dataset. This method is crucial when you want to adapt a pre-existing model to a specific task or domain. Here’s a step-by-step guide on how to fine-tune LLMs:<ul>
+<li><strong>Step 1:</strong> <strong>Define the Task</strong>. Whether it’s sentiment analysis, text summarization, text generation or a  machine translation and so on.</li>
+<li><strong>Step 2: Choose a Pre-trained Model.</strong> Select a pre-trained LLM that aligns with your task. Models like GPT-3,  BERT, or RoBERTa are popular choices. Ensure that the chosen model has  the capacity to handle the complexity of your task.</li>
+<li><strong>Step3: Dataset Preparation.</strong> Prepare a labeled dataset specific to your task. The dataset should  include examples of inputs and corresponding desired outputs. Ensure  diversity in the data to improve the model’s generalization.</li>
+<li><strong>Step4: Data Preprocessing.</strong> Tokenize and preprocess the text data to match the format used during  pre-training. This often involves converting text into numerical tokens  and handling any specific requirements of the chosen model.</li>
+<li><strong>Step 5: Model Architecture Adjustment.</strong> Modify the architecture of the pre-trained model to suit your task. For  example, add task-specific layers or adjust the final output layer to  match the number of classes in your classification task.</li>
+<li><strong>Step 6: Training Parameters.</strong> Set hyperparameters such as learning rate, batch size, and the number of training epochs. Experiment with different values to find the optimal  configuration for your task.</li>
+<li><strong>Step 7: Fine-tune the model.</strong> Train the modified model on your task-specific dataset.</li>
 </ul>
-<p><font color='black'>在这一领域，有很多关键人物: </font></p>
-<p> <font color='black'>Jacob Devlin：BERT模型的主要作者之一 </font></p>
-<p> <font color='black'>Thomas Wolf：Hugging Face公司的首席科学家，BERT模型的主要作者之一 </font></p>
-<p><font color='black'>Yoshua Bengio、Geoffrey Hinton：深度学习领域的著名学者，提出了许多重要的深度学习模型和算法 </font></p>
-</blockquote>
-<p>5.这篇文章提出的问题解决方案中，核心贡献是什么？</p>
-<blockquote>
-<p><font color='black'>This paper introduces a novel model architecture called DeBERTa, along  with two innovative techniques aimed at enhancing model performance: </font></p>
-<p><font color='black'><strong>Disentangled Attention Mechanism</strong>: This mechanism involves computing  queries, keys, and values separately in the self-attention mechanism,  enabling the model to better capture dependencies between different  positions and thereby improving predictive performance.</font></p>
-<p><font color='black'><strong>Enhanced Mask Decoder</strong>: This technique introduces additional masking  information in the decoder, enabling the model to better handle noise  and errors in the input sequences, thus enhancing the model’s robustness and generalization capabilities.</font></p>
-<p><font color='black'><strong>DeBERTa Model Architecture</strong>: This architecture combines the disentangled  attention mechanism and the enhanced mask decoder, along with the use of larger models and more training data, resulting in state-of-the-art  performance across multiple natural language processing tasks.</font></p>
-</blockquote>
-<p>6.实验是如何设计的？</p>
-<blockquote>
-<p><font color='black'> The experiments conducted in this paper include:</font></p>
-<p><font color='black'> 1. <strong>Ablation Study</strong>: The authors conducted an ablation study to quantify  the relative contributions of different components in DeBERTa. They  compared the performance of the full model to variants that excluded  certain components, such as the disentangled attention mechanism and the enhanced mask decoder.</font></p>
-<p><font color='black'> 2. <strong>Comparison with Other Models</strong>: The authors compared the performance of  DeBERTa to other state-of-the-art models, such as BERT, RoBERTa, and  XLNet, on multiple benchmark datasets, including GLUE, SuperGLUE, RACE,  and SQuAD.</font></p>
-<p><font color='black'> 3. <strong>Model Convergence Analysis</strong>: The authors studied the convergence  properties of DeBERTa to characterize the model training efficiency.</font></p>
-<p><font color='black'> 4. <strong>Attention Pattern Visualization</strong>: The authors visualized the different attention patterns of DeBERTa and RoBERTa in Appendix A.9.</font></p>
-</blockquote>
-<p>7.实验是在什么样的数据集基础上运行的？</p>
-<blockquote>
-<p><font color='black'>The experiments were conducted on multiple benchmark datasets, including GLUE, SuperGLUE, RACE, and SQuAD.</font></p>
-<p><font color='black'>- GLUE (General Language Understanding Evaluation): A benchmark dataset  used to evaluate the performance of models on various natural language  understanding tasks, including sentiment analysis, textual entailment,  and more.</font></p>
-<p><font color='black'> - SuperGLUE: An extension of GLUE, including more challenging tasks such as coreference resolution and commonsense reasoning.</font></p>
-<p><font color='black'> - RACE (Reading Comprehension from Examinations): A large-scale machine  reading comprehension dataset collected from English examinations in  China, designed for middle school and high school students.</font></p>
-<p><font color='black'>- SQuAD (Stanford Question Answering Dataset): A popular machine reading comprehension benchmark dataset containing approximately 500 Wikipedia  articles’ passages, with questions and answers obtained through  crowdsourcing. The SQuAD v2.0 dataset includes unanswerable questions  about the same passages.</font></p>
-</blockquote>
-<p>8.实验结果能否有力地支持假设？</p>
-<blockquote>
-<p><font color='black'> The experimental results in the paper provide strong evidence to support the hypothesis that DeBERTa outperforms other state-of-the-art models  on various natural language processing tasks. </font></p>
-<p><font color='black'>The authors conducted a  comprehensive empirical study on several benchmark datasets, including  GLUE, SuperGLUE, RACE, and SQuAD, and showed that DeBERTa achieved  state-of-the-art performance on most of these datasets. The authors also conducted ablation studies to analyze the contribution of each  component of DeBERTa to its overall performance.</font></p>
-<p><font color='black'>The results of these  studies suggest that the disentangled attention mechanism and enhanced  mask decoder are critical to the improved performance of DeBERTa.  Overall, the experimental results provide strong support for the  hypothesis that DeBERTa is a highly effective model architecture for  natural language processing tasks.</font></p>
-</blockquote>
-<p>9.这篇文章的贡献是什么？</p>
-<blockquote>
-<p><font color='black'>The main contributions of this paper include: </font></p>
-<p><font color='black'>①Introducing DeBERTa: The paper introduces the DeBERTa model, a  large-scale pre-trained language model that surpasses human performance  on various natural language understanding tasks, as demonstrated on  benchmark datasets such as GLUE, SuperGLUE, RACE, and SQuAD.</font></p>
-<p><font color='black'>②Extending to NLG Tasks: The paper demonstrates the extension of  DeBERTa to handle natural language generation tasks, showcasing its  effectiveness as an auto-regressive language model on tasks such as  Wikitext-103.</font></p>
-<p><font color='black'>③Performance Milestone: DeBERTa achieves significant performance  improvements, surpassing human performance on the SuperGLUE benchmark,  which is a notable milestone in the field of natural language  understanding.</font></p>
-</blockquote>
-<p>10.下一步可以做什么？</p>
-<blockquote>
-<p><font color='black'>①Compositional Generalization: While DeBERTa has achieved impressive  performance on various natural language understanding tasks, it still  falls short of human-level intelligence in terms of compositional  generalization. Future research could explore ways to make DeBERTa  incorporate compositional structures in a more explicit manner, which  could allow combining neural and symbolic computation of natural  language similar to what humans do.</font></p>
-<p><font color='black'>②Multimodal Learning: DeBERTa is currently designed to process  text-based inputs, but many real-world applications involve multimodal  inputs, such as images and videos. Future research could explore ways to extend DeBERTa to handle multimodal inputs and improve its performance  on tasks that require understanding of both text and visual information.</font></p>
-<p><font color='black'>③Model Efficiency: While DeBERTa achieves state-of-the-art performance on various natural language understanding tasks, its large size and  computational requirements limit its practicality for many real-world  applications. Future research could explore ways to improve the  efficiency of DeBERTa and other large-scale pre-trained language models, such as through model compression or knowledge distillation techniques.</font></p>
-</blockquote>
-<h4 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h4><p>**2.1 Finetune TinyLLaMA-1b with clinical instruction data with QLoRA method. **</p>
-<p><strong>First: process clinical instruction data</strong></p>
-<p>an example of processed clinical instruction data</p>
+</li>
+</ul>
+<p><strong>Evaluate the fine-tuned model</strong></p>
+<ul>
+<li>Evaluate the Model: After fine-tuning, evaluate the model’s performance on a separate validation set to ensure it generalizes well to unseen data.</li>
+</ul>
+<p><strong>Example: Finetune TinyLLaMA-1b with clinical instruction data with QLoRA method, and then evaluate the finetuned LLM on MedMCQA dataset.</strong></p>
+<p>original clinical instruction data</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&quot;input&quot;</span>: <span class="string">&quot;Hello doctor,I had mumps five months ago and after that, I started to have an infection in my left testes. It was swollen and now it has shrunk to almost half the size of the other one. As I am sexually active, I feel a pain in each of the vas deferens after sex. If I do not have sex for days, they become sensitive. I was treated with Ceftum 500 mg, the first time I had an infection. Now my question is, is there any chance that the infection is still in my body? And, do I need to get examined for it? For the time being, please suggest some precautionary antibiotics for my relief.&quot;</span>,</span><br><span class="line"><span class="string">&quot;answer_icliniq&quot;</span>: <span class="string">&quot;Hello, Welcome to Chat Doctor forum. I can understand your concern. You had mumps and this is a viral infection known to cause an inflammation of the testis in some cases. Take care. For more information consult a sexologist online &quot;</span>,</span><br><span class="line"><span class="string">&quot;answer_chatgpt&quot;</span>: <span class="string">&quot;It is possible that you still have an infection in your testes, especially if you have been experiencing pain and sensitivity in your vas deferens. It is recommended that you consult with a doctor or urologist for an examination and further testing to determine if there is an ongoing infection.\n\nAs an AI language model, I cannot prescribe medications or antibiotics. However, taking antibiotics without a doctor&#x27;s prescription is not recommended. It is important to consult with a healthcare professional for proper diagnosis and treatment.&quot;</span>,</span><br><span class="line"><span class="string">&quot;answer_chatdoctor&quot;</span>: <span class="string">&quot;1) There is no need to worry about reinfection as the infection caused by Mumps virus does not persist in the body and is completely cleared up by the immune system.2) The swelling at your scrotum is due to inflammation of epididymis or vas deferens which is a result of mumps infection.3) There is no need to take antibiotics for this problem. You can take anti-inflammatory medicines like Ibuprofen for symptomatic relief.4) Doing cool compresses over the scrotal area will help in reducing the inflammation and pain.&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>processed clinical instruction data</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&quot;conversation_id&quot;</span>: <span class="number">1</span>,</span><br><span class="line"> <span class="string">&quot;category&quot;</span>: <span class="string">&quot;Brainstorming&quot;</span>,</span><br><span class="line"> <span class="string">&quot;conversation&quot;</span>:</span><br><span class="line"> 	[&#123;<span class="string">&quot;human&quot;</span>: <span class="string">&quot;Hello doctor,I had mumps five months ago and after that, I started to have an infection in my left testes. It was swollen and now it has shrunk to almost half the size of the other one. As I am sexually active, I feel a pain in each of the vas deferens after sex. If I do not have sex for days, they become sensitive. I was treated with Ceftum 500 mg, the first time I had an infection. Now my question is, is there any chance that the infection is still in my body? And, do I need to get examined for it? For the time being, please suggest some precautionary antibiotics for my relief.&quot;</span>, </span><br><span class="line">      <span class="string">&quot;assistant&quot;</span>: <span class="string">&quot;Hello, Welcome to Chat Doctor forum. I can understand your concern. You had mumps and this is a viral infection known to cause an inflammation of the testis in some cases. Take care. For more information consult a sexologist online &quot;</span>&#125;]&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>Second: refer to Firefly code to conduct the task</strong></p>
 <p>train_args:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;output_dir&quot;</span>: <span class="string">&quot;output/tinyllama-qlora-clinical&quot;</span>,</span><br><span class="line">    <span class="string">&quot;model_name_or_path&quot;</span>: <span class="string">&quot;./tinyllama&quot;</span>,</span><br><span class="line">    <span class="string">&quot;train_file&quot;</span>: <span class="string">&quot;iCliniq_data_new.jsonl&quot;</span>,</span><br><span class="line">    <span class="string">&quot;num_train_epochs&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;per_device_train_batch_size&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;gradient_accumulation_steps&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;learning_rate&quot;</span>: <span class="number">1e-5</span>,</span><br><span class="line">    <span class="string">&quot;max_seq_length&quot;</span>: <span class="number">512</span>,</span><br><span class="line">    <span class="string">&quot;logging_steps&quot;</span>: <span class="number">20</span>,</span><br><span class="line">    <span class="string">&quot;save_steps&quot;</span>: <span class="number">100</span>,</span><br><span class="line">    <span class="string">&quot;save_total_limit&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;lr_scheduler_type&quot;</span>: <span class="string">&quot;cosine&quot;</span>,</span><br><span class="line">    <span class="string">&quot;warmup_steps&quot;</span>: <span class="number">500</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;gradient_checkpointing&quot;</span>: false,</span><br><span class="line">    <span class="string">&quot;disable_tqdm&quot;</span>: false,</span><br><span class="line">    <span class="string">&quot;optim&quot;</span>: <span class="string">&quot;adamw_hf&quot;</span>,</span><br><span class="line">    <span class="string">&quot;seed&quot;</span>: <span class="number">42</span>,</span><br><span class="line">    <span class="string">&quot;fp16&quot;</span>: true,</span><br><span class="line">    <span class="string">&quot;report_to&quot;</span>: <span class="string">&quot;tensorboard&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dataloader_num_workers&quot;</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="string">&quot;save_strategy&quot;</span>: <span class="string">&quot;steps&quot;</span>,</span><br><span class="line">    <span class="string">&quot;weight_decay&quot;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&quot;max_grad_norm&quot;</span>: <span class="number">1.0</span>,</span><br><span class="line">    <span class="string">&quot;remove_unused_columns&quot;</span>: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>train.out:</p>
-<p><img src="D:\wxl\file\grad1\STA5007nlp\assignment\project2\train.out.png" alt="train.out"></p>
-<p><strong>2.2  Evaluate the finetuned LLM on MedMCQA dataset (see attached). As the test set has no answers, we will evaluate on the validation dataset.</strong></p>
+<p><img src="D:\pro\work\source\image\train.out.png" alt="train.out"></p>
+<p>evaluation code:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoTokenizer, AutoModelForCausalLM</span><br><span class="line"><span class="keyword">from</span> datasets <span class="keyword">import</span> load_dataset</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">from</span> peft <span class="keyword">import</span> PeftModel</span><br><span class="line"><span class="keyword">import</span> jsonlines</span><br><span class="line">path=<span class="string">&#x27;./tinyllama&#x27;</span></span><br><span class="line">base_model=AutoModelForCausalLM.from_pretrained(path,device_map=<span class="string">&#x27;auto&#x27;</span>)</span><br><span class="line">tokenizer=AutoTokenizer.from_pretrained(<span class="string">&#x27;./tinyllama&#x27;</span>,add_bos_token=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">pretrain_model=PeftModel.from_pretrained(base_model,<span class="string">&#x27;./output/tinyllama-qlora-clinical/final&#x27;</span>)</span><br><span class="line">dataset = load_dataset(<span class="string">&#x27;json&#x27;</span>, data_files=<span class="string">&#x27;dev_data.json&#x27;</span>,split=<span class="string">&#x27;train&#x27;</span>)</span><br><span class="line"></span><br><span class="line">correct_predictions = <span class="number">0</span></span><br><span class="line">total_instances = <span class="built_in">len</span>(dataset)</span><br><span class="line">reply_tinyllamda=&#123;&#125;</span><br><span class="line">output_file_path=<span class="string">&#x27;reply_tinyllama.jsonl&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> instance <span class="keyword">in</span> tqdm(dataset):</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#将问题和每个选项拼接在一起</span></span><br><span class="line">    question_text = instance[<span class="string">&quot;question&quot;</span>]</span><br><span class="line">    options = [<span class="built_in">str</span>(instance[<span class="string">&quot;opa&quot;</span>]), <span class="built_in">str</span>(instance[<span class="string">&quot;opb&quot;</span>]), <span class="built_in">str</span>(instance[<span class="string">&quot;opc&quot;</span>]), <span class="built_in">str</span>(instance[<span class="string">&quot;opd&quot;</span>])]</span><br><span class="line"></span><br><span class="line">    inputs = [tokenizer.encode(question_text + <span class="string">&quot; &quot;</span> + option, return_tensors=<span class="string">&#x27;pt&#x27;</span>) <span class="keyword">for</span> option <span class="keyword">in</span> options]</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#使用模型进行预测，获取每个预测的最后一个token的logit</span></span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        predictions = [pretrain_model(<span class="built_in">input</span>)[<span class="number">0</span>] <span class="keyword">for</span> <span class="built_in">input</span> <span class="keyword">in</span> inputs]</span><br><span class="line">        logits = [prediction[:, -<span class="number">1</span>, :] <span class="keyword">for</span> prediction <span class="keyword">in</span> predictions]</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#计算每个选项的概率，找到概率最高的选项</span></span><br><span class="line">    probabilities = [torch.nn.functional.softmax(logit, dim=-<span class="number">1</span>) <span class="keyword">for</span> logit <span class="keyword">in</span> logits]</span><br><span class="line">    total_probabilities = [torch.<span class="built_in">sum</span>(probability).item() <span class="keyword">for</span> probability <span class="keyword">in</span> probabilities]</span><br><span class="line">    max_probability_option = options[total_probabilities.index(<span class="built_in">max</span>(total_probabilities))]</span><br><span class="line">    max_index=total_probabilities.index(<span class="built_in">max</span>(total_probabilities))   </span><br><span class="line">    </span><br><span class="line">    reply_tinyllamda[<span class="string">&#x27;question&#x27;</span>]=question_text</span><br><span class="line">    reply_tinyllamda[<span class="string">&#x27;answer_tinyllama&#x27;</span>]=max_probability_option</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#保存结果</span></span><br><span class="line">    <span class="keyword">with</span> jsonlines.<span class="built_in">open</span>(output_file_path, mode=<span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> writer:</span><br><span class="line">        writer.write(reply_tinyllamda)</span><br><span class="line">    correct_index = instance[<span class="string">&quot;cop&quot;</span>]-<span class="number">1</span>   </span><br><span class="line">    <span class="keyword">if</span> correct_index == max_index:</span><br><span class="line">        correct_predictions += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">accuracy = correct_predictions / total_instances</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;accuracy: <span class="subst">&#123;accuracy:<span class="number">.2</span>%&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="D:\wxl\file\grad1\STA5007nlp\assignment\project2\evaluate.out.png" alt="evaluate.out"></p>
+<p>eval.out:</p>
+<p><img src="D:\pro\work\source\image\evaluate.out.png" alt="evaluate.out"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/26/project/" data-id="clqlpcbly0001l4i64uwvc1g0" data-title="project" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-first-article" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/22/first-article/" class="article-date">
-  <time class="dt-published" datetime="2023-12-22T13:08:09.000Z" itemprop="datePublished">2023-12-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/22/first-article/">first article</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/22/first-article/" data-id="clqlpcblv0000l4i6cui387rm" data-title="first article" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/22/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-12-22T12:42:22.744Z" itemprop="datePublished">2023-12-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/22/hello-world/" data-id="clqgmoc1u0000g8i6gy1pfhbp" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/12/26/Sharing/" data-id="clqlrpy8e0000awi6b77q8173" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -320,15 +167,7 @@
       <ul>
         
           <li>
-            <a href="/2023/12/26/project/">project</a>
-          </li>
-        
-          <li>
-            <a href="/2023/12/22/first-article/">first article</a>
-          </li>
-        
-          <li>
-            <a href="/2023/12/22/hello-world/">Hello World</a>
+            <a href="/2023/12/26/Sharing/">(no title)</a>
           </li>
         
       </ul>
